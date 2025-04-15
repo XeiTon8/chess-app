@@ -68,13 +68,17 @@ function App() {
           <div
           key={i}
           style={{
-            minWidth: "40px", height: "40px", 
+            minWidth: "40px", maxWidth: "40px",
+            height: "40px", 
             backgroundColor: `${cell.selected ? "orange" : cell.color}`, 
             color: `${cell.color.includes("white") ? "black" : "white"}`,
             cursor: 'pointer',
             }}
             onClick={() => selectCell(String(cell.x), Number(cell.y))}
-            >{cell.x} {cell.y}</div>
+            >
+              <span>{cell.x}</span>
+              <span>{cell.y}</span>
+            </div>
         )
       })
     })
