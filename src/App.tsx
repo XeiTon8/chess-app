@@ -20,14 +20,14 @@ function App() {
 
   const createBoard = () => {
     const board: ICell[][] = [];
-    const reversedCoors = [...coordinates].reverse();
+    
 
-    for (let i = reversedCoors.length - 1; i >=0; i--) {
+    for (let i = coordinates.length - 1; i >=0; i--) {
       const row: ICell[] = [];
 
       for (let j = 0; j < numbers.length; j++) {
           let newCell: ICell = {
-            x: reversedCoors[j],
+            x: coordinates[j],
             y: numbers[i],
             color: (i + j) % 2 == 0 ? "black" : "white",
             selected: false,
